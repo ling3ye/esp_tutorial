@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ESP32 Module Pinout | ESP Tutorial</title><meta name="author" content="LingShun"><meta name="copyright" content="LingShun"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="ESP32 Module Pinout ESP32 Development Board Pinout Important to note upfront, it is not recommended to use the following pins when using the ESP32, as they may cause various unsolvable issues in your">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ESP32 Module Pinout">
+<meta property="og:url" content="http://esptutorial.com/base/ESP32-Module-Pinout/index.html">
+<meta property="og:site_name" content="ESP Tutorial">
+<meta property="og:description" content="ESP32 Module Pinout ESP32 Development Board Pinout Important to note upfront, it is not recommended to use the following pins when using the ESP32, as they may cause various unsolvable issues in your">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.lingshunlab.com/lingshun-logo-7%20.png">
+<meta property="article:published_time" content="2024-10-22T12:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-22T13:58:09.079Z">
+<meta property="article:author" content="LingShun">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.lingshunlab.com/lingshun-logo-7%20.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://esptutorial.com/base/ESP32-Module-Pinout/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-YY1KB0ZECR"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-YY1KB0ZECR');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ESP32 Module Pinout',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-22 21:58:09'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img.lingshunlab.com/lingshun-logo-7%20.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Link</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.lingshunlab.com/"><i class="fa-fw fab fa-github"></i><span> lingShunLAB</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="ESP Tutorial"><span class="site-name">ESP Tutorial</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Link</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.lingshunlab.com/"><i class="fa-fw fab fa-github"></i><span> lingShunLAB</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ESP32 Module Pinout</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-10-22T12:00:00.000Z" title="Created 2024-10-22 20:00:00">2024-10-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-10-22T13:58:09.079Z" title="Updated 2024-10-22 21:58:09">2024-10-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/base/">BASE</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ESP32 Module Pinout"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="ESP32-Module-Pinout"><a href="#ESP32-Module-Pinout" class="headerlink" title="ESP32 Module Pinout"></a>ESP32 Module Pinout</h2><p><img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/08/esp32-pinout-chip-ESP-WROOM-32.png?quality=100&strip=all&ssl=1"></p>
+<h2 id="ESP32-Development-Board-Pinout"><a href="#ESP32-Development-Board-Pinout" class="headerlink" title="ESP32 Development Board Pinout"></a>ESP32 Development Board Pinout</h2><p><img src="https://img.lingshunlab.com/esp32-pins-detail.png?imageView2/0/q/75%7Cwatermark/2/text/TGluZ1NodW5sYWIuY29tIOWHjOmhuuWunumqjOWupA==/font/5b6u6L2v6ZuF6buR/fontsize/260/fill/IzAwMDAwMA==/dissolve/66/gravity/SouthEast/dx/10/dy/10%7Cimageslim" alt="esp32-pins-detail"></p>
+<p>Important to note upfront, it is not recommended to use the following pins when using the ESP32, as they may cause various unsolvable issues in your project.</p>
+<h2 id="Pins-Not-Recommended-or-Restricted-for-Use"><a href="#Pins-Not-Recommended-or-Restricted-for-Use" class="headerlink" title="Pins Not Recommended or Restricted for Use"></a>Pins Not Recommended or Restricted for Use</h2><p>It is not recommended to use Strapping pins, SPI flash pins, and input-only pins.</p>
+<h3 id="Strapping-Pins"><a href="#Strapping-Pins" class="headerlink" title="Strapping Pins"></a>Strapping Pins</h3><p>GPIO 0 GPIO 2 GPIO 4 GPIO 5 (must be high during startup) GPIO 12 (must be low during startup) GPIO 15 (must be high during startup)</p>
+<p>Note:</p>
+<p>When using external modules, ensure that GPIO12 is not pulled high, as this will cause the ESP32 to fail to start. Additionally, some GPIOs change their state to high or output PWM signals during startup or reset, so take care when using them.</p>
+<h3 id="SPI-flash-pins-integrated-in-ESP-WROOM-32"><a href="#SPI-flash-pins-integrated-in-ESP-WROOM-32" class="headerlink" title="SPI flash pins integrated in ESP-WROOM-32"></a>SPI flash pins integrated in ESP-WROOM-32</h3><p>GPIO 6 to GPIO 11 are exposed on some ESP32 development boards. However, these pins are connected to the integrated SPI flash on the ESP-WROOM-32 chip and are not recommended for other uses. Therefore, do not use these pins in your project:</p>
+<p>GPIO 6 (SCK&#x2F;CLK)<br>GPIO 7 (SDO&#x2F;SD0)<br>GPIO 8 (SDI&#x2F;SD1)<br>GPIO 9 (SHD&#x2F;SD2)<br>GPIO 10 (SWP&#x2F;SD3)<br>GPIO 11 (CSC&#x2F;CMD)</p>
+<h3 id="Input-only-pins"><a href="#Input-only-pins" class="headerlink" title="Input-only pins"></a>Input-only pins</h3><p>GPIO 34 to GPIO 39 are GPIO – input-only pins. These pins do not have internal pull-up or pull-down resistors. They cannot be used as outputs, so they can only be used as inputs:</p>
+<p>GPIO 34<br>GPIO 35<br>GPIO 36<br>GPIO 39</p>
+<p>These pins are used for the bootloader or for flashing mode&#x2F;on most built-in USB&#x2F;Serial development boards, you don’t need to worry about the state of these pins, the development board will set them to the correct state to use flashing or boot mode.</p>
+<p>Note:</p>
+<p>If you have external modules connected to these pins, you may encounter trouble when trying to upload new code, flash the ESP32 with a new firmware, or reset the board, for example, mysterious errors and failures. It may be because these external modules prevent the ESP32 from entering the correct mode.</p>
+<p>So, these pins are not recommended to be used in your project.</p>
+<p>Now, let’s start to introduce the pins of ESP32.</p>
+<h2 id="ESP32-Peripherals"><a href="#ESP32-Peripherals" class="headerlink" title="ESP32 Peripherals:"></a>ESP32 Peripherals:</h2><ul>
+<li>18 ADC channels</li>
+<li>4 SPI interfaces</li>
+<li>3 UART interfaces</li>
+<li>1 I2C interface</li>
+<li>16 PWM outputs</li>
+<li>2 DACs</li>
+<li>2 I2S interfaces</li>
+<li>10 capacitive sensing GPIOs</li>
+<li>16 RTC GPIOs</li>
+<li>2 built-in Hall sensors in ESP32</li>
+</ul>
+<h3 id="18-ADC-channels"><a href="#18-ADC-channels" class="headerlink" title="18 ADC channels"></a>18 ADC channels</h3><p>ESP32 has 18 x 12-bit ADC input channels (while ESP8266 only has 1x 10-bit ADC). These are the GPIOs that can be used as ADC and corresponding channels:</p>
+<p>Unlike some digital peripherals (PWM, software SPI, and I2C), ADC pins are fixed, meaning you must use the predefined GPIO pins with ADC functionality and cannot configure them in software. However, you must be aware of some limitations.</p>
+<p>Although ESP32 has 18 ADC channels, not all ADC pins are available to users. In the 8 ADC1 channels, only 6 are available (ACD1_CH0 and ACD1_CH3 to ACD1_CH7), while ADC1_CH1 and ADC1_CH2 are not available (even if the pins are not exposed on the ESP32 development board).</p>
+<p>When using ADC2, it gets a bit more complex. When you use ESP32’s Wi-Fi, the Wi-Fi Driver uses the ADC2 Peripheral. Therefore, only ADC2 can be used when the Wi-Fi driver is not started.</p>
+<p>Even if you are using ADC2 (assuming Wi-Fi is not used), not all pins are always available because some pins related to ADC2 are used for other important purposes (bootstrapping).</p>
+<table>
+<thead>
+<tr>
+<th><strong>ADC Channel</strong></th>
+<th><strong>Pin Name</strong></th>
+<th><strong>GPIO Pin</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ACD1_CH0</td>
+<td>A0</td>
+<td>36</td>
+<td>Available &#x2F; Built-in Hall sensor</td>
+</tr>
+<tr>
+<td>ACD1_CH1</td>
+<td>\</td>
+<td>37</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>ACD1_CH2</td>
+<td>\</td>
+<td>38</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>ACD1_CH3</td>
+<td>A3</td>
+<td>39</td>
+<td>Available &#x2F; Built-in Hall sensor</td>
+</tr>
+<tr>
+<td>ACD1_CH4</td>
+<td>A4</td>
+<td>32</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>ACD1_CH5</td>
+<td>A5</td>
+<td>33</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>ACD1_CH6</td>
+<td>A6</td>
+<td>34</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>ACD1_CH7</td>
+<td>A7</td>
+<td>35</td>
+<td>Available</td>
+</tr>
+<tr>
+<td>ACD2_CH0</td>
+<td>A10</td>
+<td>4</td>
+<td>Not available when starting WIFI</td>
+</tr>
+<tr>
+<td>ACD2_CH1</td>
+<td>A11</td>
+<td>0</td>
+<td>Not available &#x2F; Used for BOOT Strapping</td>
+</tr>
+<tr>
+<td>ACD2_CH2</td>
+<td>A12</td>
+<td>2</td>
+<td>Used for BOOT Strapping</td>
+</tr>
+<tr>
+<td>ACD2_CH3</td>
+<td>A13</td>
+<td>15</td>
+<td>Used for BOOT Strapping</td>
+</tr>
+<tr>
+<td>ACD2_CH4</td>
+<td>A14</td>
+<td>13</td>
+<td>Not available when starting WIFI</td>
+</tr>
+<tr>
+<td>ACD2_CH5</td>
+<td>A15</td>
+<td>12</td>
+<td>Not available when starting WIFI</td>
+</tr>
+<tr>
+<td>ACD2_CH6</td>
+<td>A16</td>
+<td>14</td>
+<td>Not available when starting WIFI</td>
+</tr>
+<tr>
+<td>ACD2_CH7</td>
+<td>A17</td>
+<td>27</td>
+<td>Not available when starting WIFI</td>
+</tr>
+<tr>
+<td>ACD2_CH8</td>
+<td>A18</td>
+<td>25</td>
+<td>Not available when starting WIFI</td>
+</tr>
+<tr>
+<td>ACD2_CH9</td>
+<td>A19</td>
+<td>26</td>
+<td>Not available when starting WIFI</td>
+</tr>
+</tbody></table>
+<p>ADC input channels have 12-bit resolution. This means you can get analog readings ranging from 0 to 4095, where 0 corresponds to 0V and 4095 corresponds to 3.3V. You can also set the resolution of the channel on the code and ADC range.</p>
+<p>ESP32 ADC pins do not have linear behavior. You may not be able to distinguish between 0 and 0.1V, or 3.2 and 3.3V. Keep this in mind when using ADC pins. You will get behavior similar to the one shown in the following figure.</p>
+<h3 id="4-SPI-interfaces"><a href="#4-SPI-interfaces" class="headerlink" title="4 SPI interfaces"></a>4 SPI interfaces</h3><p>The default SPI pin mapping that can be used is:</p>
+<table>
+<thead>
+<tr>
+<th><strong>SPI</strong></th>
+<th><strong>MOSI</strong></th>
+<th><strong>MISO</strong></th>
+<th><strong>CLK</strong></th>
+<th><strong>CS</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>VSPI</strong>（SPI3）</td>
+<td>GPIO 23</td>
+<td>GPIO 19</td>
+<td>GPIO 18</td>
+<td>GPIO 5</td>
+</tr>
+<tr>
+<td><strong>HSPI</strong>（SPI2）</td>
+<td>GPIO 13</td>
+<td>GPIO 12</td>
+<td>GPIO 14</td>
+<td>GPIO 15</td>
+</tr>
+</tbody></table>
+<p><strong>SPI（Serial Peripheral Interface）</strong> protocol is a communication protocol proposed by Motorola, which is a high-speed full-duplex communication bus. It is widely used in ADC, LCD, etc. devices and MCUs, and requires high communication rates.</p>
+<p>The pins on the chip only occupy four lines. MISO: The main device data output, the slave device data input. MOSI: The main device data input, the slave device data output. SCK: Clock signal, controlled by the main device. NSS (CS): Slave device selection signal, controlled by the main device. When NSS is low, the slave device is selected.</p>
+<p>ESP32 integrates <code>4 SPI</code> peripherals.</p>
+<ul>
+<li><code>SPI0</code> and <code>SPI1</code> are used internally to access the flash connected to ESP32. Two controllers share the same SPI bus signals and have an arbiter to determine which one can access the bus.</li>
+<li><code>SPI2</code> and <code>SPI3</code> are <strong>general SPI controllers</strong>, sometimes referred to as HSPI and VSPI. They are open to users. SPI2 and SPI3 have independent bus signals and are named the same. Each bus has 3 CS lines, and can control up to 6 SPI slave devices.</li>
+</ul>
+<p>Note:</p>
+<p>HSPI and VSPI are not high-speed SPI and Very High-speed SPI as believed by some users. This is just a different name for SPI and HSPI, VSPI is the same as SPI3.</p>
+<p><img src="https://img-blog.csdnimg.cn/20190822134322546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2pkc25wZ3hq,size_16,color_FFFFFF,t_70"></p>
+<h3 id="I2C-Communication-Protocol"><a href="#I2C-Communication-Protocol" class="headerlink" title="I2C Communication Protocol"></a>I2C Communication Protocol</h3><p>ESP32 default I2C pins are:</p>
+<ul>
+<li>GPIO 21 （SDA）</li>
+<li>GPIO 22 （SCL）</li>
+</ul>
+<p>In ESP32, any pin can be defined as SDA or SCL, but it is not recommended unless absolutely necessary.</p>
+<p>You can use the following statements in the Arduino IDE to configure other pins as SDA or SCL</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Wire.begin(SDA, SCL);</span><br></pre></td></tr></table></figure>
+
+<h3 id="PWM"><a href="#PWM" class="headerlink" title="PWM"></a>PWM</h3><p>ESP32 PWM controller is mainly designed for controlling the intensity of LEDs, but it can also be used to generate PWM signals for other purposes. It has 16 channels and can produce independent PWM waveforms.</p>
+<p>The ESP32 PWM controller has 8 high-speed channels and 8 low-speed channels, giving us a total of 16 channels. They are divided into two groups based on speed. Each group has 4 timers&#x2F;8 channels. This means that each pair of channels shares the same timer. Therefore, we cannot independently control the PWM frequency of each pair of channels.</p>
+<p><img src="https://deepbluembedded.com/wp-content/uploads/2021/04/ESP32-PWM-Channels-Pins-PWM-Tutorial-With-Examples.png?ezimgfmt=ng:webp/ngcb6"></p>
+<p>All pins that can be used as output can be used as PWM pins (GPIO 34 to 39 cannot generate PWM).</p>
+<p>To set up a PWM signal, you need to define these parameters in your code:</p>
+<ul>
+<li>Signal frequency;</li>
+<li>Duty cycle;</li>
+<li>PWM channel;</li>
+<li>GPIO that outputs the signal.</li>
+</ul>
+<h3 id="Digital-to-Analog-Converter-DAC"><a href="#Digital-to-Analog-Converter-DAC" class="headerlink" title="Digital to Analog Converter (DAC)"></a>Digital to Analog Converter (DAC)</h3><p>ESP32 has 2 x 8-bit DAC channels for converting digital signals to analog voltage signals. These are the DAC channels:</p>
+<ul>
+<li>DAC1 (GPIO25)</li>
+<li>DAC2 (GPIO26)</li>
+</ul>
+<h3 id="I2S-High-speed-Digital-Audio-Transmission-Standard-Protocol"><a href="#I2S-High-speed-Digital-Audio-Transmission-Standard-Protocol" class="headerlink" title="I2S High-speed Digital Audio Transmission Standard Protocol"></a>I2S High-speed Digital Audio Transmission Standard Protocol</h3><p>On the ESP32 pins, DAC1 and DAC2 are actually marked.</p>
+<ul>
+<li>GPIO 25</li>
+<li>GPIO 26</li>
+</ul>
+<h3 id="Capacitive-Touch-GPIO"><a href="#Capacitive-Touch-GPIO" class="headerlink" title="Capacitive Touch GPIO"></a>Capacitive Touch GPIO</h3><p>ESP32 has 10 internal capacitive touch sensors. They can sense any changes in charged objects, such as human skin. Therefore, they can detect changes caused by touching the GPIO with a finger. These pins can be easily integrated into capacitive pads and replace mechanical buttons. Capacitive touch pins can also be used to wake ESP32 from deep sleep.</p>
+<p>These internal touch sensors are connected to these GPIOs:</p>
+<ul>
+<li>T0 (GPIO 4)</li>
+<li>T1 (GPIO 0)</li>
+<li>T2 (GPIO 2)</li>
+<li>T3 (GPIO 15)</li>
+<li>T4 (GPIO 13)</li>
+<li>T5 (GPIO 12)</li>
+<li>T6 (GPIO 14)</li>
+<li>T7 (GPIO 27)</li>
+<li>T8 (GPIO 33)</li>
+<li>T9 (GPIO 32)</li>
+</ul>
+<h3 id="RTC-GPIO"><a href="#RTC-GPIO" class="headerlink" title="RTC GPIO"></a>RTC GPIO</h3><p>ESP32 has RTC GPIO support. When ESP32 is in deep sleep, the GPIOs routed to the RTC low-power subsystem can be used. When the ultra-low-power (ULP) co-processor is running, these RTC GPIOs can be used to wake ESP32 from deep sleep. The following GPIOs can be used as external wake-up sources:</p>
+<ul>
+<li>RTC_GPIO0 (GPIO36)</li>
+<li>RTC_GPIO3 (GPIO39)</li>
+<li>RTC_GPIO4 (GPIO34)</li>
+<li>RTC_GPIO5 (GPIO35)</li>
+<li>RTC_GPIO6 (GPIO25)</li>
+<li>RTC_GPIO7 (GPIO26)</li>
+<li>RTC_GPIO8 (GPIO33)</li>
+<li>RTC_GPIO9 (GPIO32)</li>
+<li>RTC_GPIO10 (GPIO4)</li>
+<li>RTC_GPIO11 (GPIO0)</li>
+<li>RTC_GPIO12 (GPIO2)</li>
+<li>RTC_GPIO13 (GPIO15)</li>
+<li>RTC_GPIO14 (GPIO13)</li>
+<li>RTC_GPIO15 (GPIO12)</li>
+<li>RTC_GPIO16 (GPIO14)</li>
+<li>RTC_GPIO17 (GPIO27)</li>
+</ul>
+<h3 id="Interrupt"><a href="#Interrupt" class="headerlink" title="Interrupt"></a>Interrupt</h3><p>All GPIOs can be configured as interrupts.</p>
+<h3 id="Enable-EN"><a href="#Enable-EN" class="headerlink" title="Enable (EN)"></a>Enable (EN)</h3><p>EN is the enable pin for the 3.3V regulator. It is pulled high, so grounding it disables the 3.3V regulator. For example, this means you can use this pin connected to a button to reset ESP32.</p>
+<h3 id="GPIO-Current-Consumption"><a href="#GPIO-Current-Consumption" class="headerlink" title="GPIO Current Consumption"></a>GPIO Current Consumption</h3><p>According to the “Recommended Operating Conditions” section in the ESP32 datasheet, the absolute maximum current consumption per GPIO is 40mA.</p>
+<h3 id="ESP32-Built-in-Hall-Effect-Sensor"><a href="#ESP32-Built-in-Hall-Effect-Sensor" class="headerlink" title="ESP32 Built-in Hall Effect Sensor"></a>ESP32 Built-in Hall Effect Sensor</h3><p>ESP32 also has a built-in Hall effect sensor that can detect changes in the surrounding magnetic field.</p>
+<ul>
+<li>GPIO 36</li>
+<li>GPIO 39</li>
+</ul>
+<h2 id="References-for-this-article"><a href="#References-for-this-article" class="headerlink" title="References for this article:"></a>References for this article:</h2><p><a target="_blank" rel="noopener" href="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/">https://randomnerdtutorials.com/esp32-pinout-reference-gpios/</a><a target="_blank" rel="noopener" href="https://deepbluembedded.com/esp32-pwm-tutorial-examples-analogwrite-arduino/">https://deepbluembedded.com/esp32-pwm-tutorial-examples-analogwrite-arduino/</a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6fb40b3d0c6d">https://www.jianshu.com/p/6fb40b3d0c6d</a><a target="_blank" rel="noopener" href="https://blog.csdn.net/jdsnpgxj/article/details/100013357">https://blog.csdn.net/jdsnpgxj/article/details/100013357</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://esptutorial.com">LingShun</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://esptutorial.com/base/ESP32-Module-Pinout/">http://esptutorial.com/base/ESP32-Module-Pinout/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/base/ESP32-Data-Verification-A-Hands-On-Guide-to-Checksum-and-BCC/" title="ESP32 Data Verification Techniques in Serial Communication A Hands-On Guide to Checksum and BCC Methods"><img class="cover" src="https://img.lingshunlab.com/arduino-esp32-communication-verify-checksum-and-bcc-cover-s.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next</div><div class="next_info">ESP32 Data Verification Techniques in Serial Communication A Hands-On Guide to Checksum and BCC Methods</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img.lingshunlab.com/lingshun-logo-7%20.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LingShun</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ling3ye"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ESP32-Module-Pinout"><span class="toc-number">1.</span> <span class="toc-text">ESP32 Module Pinout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ESP32-Development-Board-Pinout"><span class="toc-number">2.</span> <span class="toc-text">ESP32 Development Board Pinout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pins-Not-Recommended-or-Restricted-for-Use"><span class="toc-number">3.</span> <span class="toc-text">Pins Not Recommended or Restricted for Use</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strapping-Pins"><span class="toc-number">3.1.</span> <span class="toc-text">Strapping Pins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SPI-flash-pins-integrated-in-ESP-WROOM-32"><span class="toc-number">3.2.</span> <span class="toc-text">SPI flash pins integrated in ESP-WROOM-32</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input-only-pins"><span class="toc-number">3.3.</span> <span class="toc-text">Input-only pins</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ESP32-Peripherals"><span class="toc-number">4.</span> <span class="toc-text">ESP32 Peripherals:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#18-ADC-channels"><span class="toc-number">4.1.</span> <span class="toc-text">18 ADC channels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-SPI-interfaces"><span class="toc-number">4.2.</span> <span class="toc-text">4 SPI interfaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I2C-Communication-Protocol"><span class="toc-number">4.3.</span> <span class="toc-text">I2C Communication Protocol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PWM"><span class="toc-number">4.4.</span> <span class="toc-text">PWM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Digital-to-Analog-Converter-DAC"><span class="toc-number">4.5.</span> <span class="toc-text">Digital to Analog Converter (DAC)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I2S-High-speed-Digital-Audio-Transmission-Standard-Protocol"><span class="toc-number">4.6.</span> <span class="toc-text">I2S High-speed Digital Audio Transmission Standard Protocol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Capacitive-Touch-GPIO"><span class="toc-number">4.7.</span> <span class="toc-text">Capacitive Touch GPIO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RTC-GPIO"><span class="toc-number">4.8.</span> <span class="toc-text">RTC GPIO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interrupt"><span class="toc-number">4.9.</span> <span class="toc-text">Interrupt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-EN"><span class="toc-number">4.10.</span> <span class="toc-text">Enable (EN)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPIO-Current-Consumption"><span class="toc-number">4.11.</span> <span class="toc-text">GPIO Current Consumption</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ESP32-Built-in-Hall-Effect-Sensor"><span class="toc-number">4.12.</span> <span class="toc-text">ESP32 Built-in Hall Effect Sensor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-for-this-article"><span class="toc-number">5.</span> <span class="toc-text">References for this article:</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/base/ESP32-Module-Pinout/" title="ESP32 Module Pinout">ESP32 Module Pinout</a><time datetime="2024-10-22T12:00:00.000Z" title="Created 2024-10-22 20:00:00">2024-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/base/ESP32-Data-Verification-A-Hands-On-Guide-to-Checksum-and-BCC/" title="ESP32 Data Verification Techniques in Serial Communication A Hands-On Guide to Checksum and BCC Methods"><img src="https://img.lingshunlab.com/arduino-esp32-communication-verify-checksum-and-bcc-cover-s.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ESP32 Data Verification Techniques in Serial Communication A Hands-On Guide to Checksum and BCC Methods"/></a><div class="content"><a class="title" href="/base/ESP32-Data-Verification-A-Hands-On-Guide-to-Checksum-and-BCC/" title="ESP32 Data Verification Techniques in Serial Communication A Hands-On Guide to Checksum and BCC Methods">ESP32 Data Verification Techniques in Serial Communication A Hands-On Guide to Checksum and BCC Methods</a><time datetime="2024-09-13T12:00:00.000Z" title="Created 2024-09-13 20:00:00">2024-09-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/base/ESP32-uses-a-level-shifting-module-to-convert-3-3V-to-5V/" title="ESP32 uses a level shifting module to convert 3.3V to 5V"><img src="https://img.lingshunlab.com/esp32-use-a-level-conversion-module-to-convert-3v-to-5v-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ESP32 uses a level shifting module to convert 3.3V to 5V"/></a><div class="content"><a class="title" href="/base/ESP32-uses-a-level-shifting-module-to-convert-3-3V-to-5V/" title="ESP32 uses a level shifting module to convert 3.3V to 5V">ESP32 uses a level shifting module to convert 3.3V to 5V</a><time datetime="2024-08-11T09:00:00.000Z" title="Created 2024-08-11 17:00:00">2024-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/base/esp32-mac-address-read-and-set/" title="ESP32 MAC address read and setting"><img src="https://img.lingshunlab.com/esp32-mac-address-read-and-set-cover-s.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ESP32 MAC address read and setting"/></a><div class="content"><a class="title" href="/base/esp32-mac-address-read-and-set/" title="ESP32 MAC address read and setting">ESP32 MAC address read and setting</a><time datetime="2024-07-29T12:00:00.000Z" title="Created 2024-07-29 20:00:00">2024-07-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/base/what-is-esp-or-esp32-or-esp8266/" title="What is ESP? or ESP8266? or ESP32?"><img src="https://img.lingshunlab.com/WX20240723-175633123.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="What is ESP? or ESP8266? or ESP32?"/></a><div class="content"><a class="title" href="/base/what-is-esp-or-esp32-or-esp8266/" title="What is ESP? or ESP8266? or ESP32?">What is ESP? or ESP8266? or ESP32?</a><time datetime="2024-07-17T12:00:00.000Z" title="Created 2024-07-17 20:00:00">2024-07-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By LingShun</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
